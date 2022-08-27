@@ -26,9 +26,9 @@ def selects_all_bears_names_and_ages_that_are_alive_and_order_youngest_to_oldest
 end
 
 def selects_oldest_bear_and_returns_name_and_age
-  "SELECT bears.name,bears.age FROM bears ORDER BY bears.age DESC LIMIT 1;"
+  "SELECT bears.name,MAX(bears.age) FROM bears;"
 end
 
 def select_youngest_bear_and_returns_name_and_age
-  "SELECT bears.name,bears.age FROM bears ORDER BY bears.age ASC LIMIT 1;"
+  "SELECT bears.name,MIN(bears.age) FROM bears;"
 end
